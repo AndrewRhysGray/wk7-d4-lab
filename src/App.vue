@@ -1,12 +1,11 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png" />
-    <HelloWorld msg="Welcome to Your Vue.js App" />
+    <beer-list :beers='beers' ></beer-list>
   </div>
 </template>
 
 <script>
-import HelloWorld from "./components/HelloWorld.vue";
+import beerList from "./components/beerList.vue";
 
 export default {
   name: "app",
@@ -14,10 +13,10 @@ export default {
     return {
       beers: [],
       selectedBeer: {}
-    };
+    }
   },
   components: {
-    HelloWorld
+    "beer-list": beerList
   },
 
   mounted() {
