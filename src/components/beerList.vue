@@ -1,13 +1,13 @@
     <template>
     <div>
         <ul>
-            <!-- <list-item v-for="(beer, index) in beers" :beers="beers" :key="index"></list-item> -->
+            <list-item v-for="(beer, index) in beers" :beer="beer" :key="index"></list-item>
         </ul>
     </div>
     </template>
 
     <script>
-    // import ListItem from './'
+    import ListItem from './listItem.vue'
     export default {
     name: 'beer-list',
     data(){
@@ -18,7 +18,7 @@
     },
     props: ['beers'],
     components: {
-        // "list-item": ListItem
+        "list-item": ListItem
     },
     methods: {
 
