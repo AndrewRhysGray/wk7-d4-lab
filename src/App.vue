@@ -39,8 +39,23 @@ export default {
 
         eventBus.$on('beer-favourite', (beer) => {
           this.favouriteBeer = beer;
-          this.favebeers.push(beer);
-      })
+          const matchingBeers = this.favebeers.filter(favebeer => favebeer.name === beer.name)
+          if (matchingBeers.length === 0) {
+            this.favebeers.push(beer)
+          }
+
+
+
+          // if ((this.favebeers.find(favebeer => favebeer === beer)) === false) {
+          //   this.favebeers.push(beer);
+          // }
+
+
+            // if (favebeer !== beer) {
+            //   this.favebeers.push(favebeer);
+            // }
+          // })
+        })
   }
 };
 </script>
