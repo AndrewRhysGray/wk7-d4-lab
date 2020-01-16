@@ -10,12 +10,6 @@
     import ListItem from './listItem.vue'
     export default {
     name: 'beer-list',
-    data(){
-        return {
-            beers: {}
-            
-        }
-    },
     props: ['beers'],
     components: {
         "list-item": ListItem
